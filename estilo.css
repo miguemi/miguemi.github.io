@@ -461,3 +461,13 @@ html {
         width: 94%;
     }
 }
+
+
+.mi-imagen {
+    margin-top: 40px;
+    border: 5px solid #034b3e;
+    display: block;
+    width: 30%;
+    margin: auto;
+    border-radius: 100%;
+}
