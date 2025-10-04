@@ -1,0 +1,59 @@
+###> symfony/framework-bundle ###
+/.env
+/.env.local
+/.env.*.local
+/.env.local.php
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+/.phpunit.cache/
+###< phpunit/phpunit ###
+
+###> symfony/asset-mapper ###
+/public/assets/
+/assets/vendor/
+###< symfony/asset-mapper ###
+
+# --- Node & Frontend ---
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+/.pnp/
+/.pnp.js
+/.parcel-cache
+/dist/
+.build/
+
+# --- IDE & Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Logs & temp ---
+*.log
+*.cache
+.cache/
+.tmp/
+.env.backup
+.env.local.bak
+
+# --- Lock & system files ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Symfony specific additional safety ---
+/.env.test
+.env.dev
+.env.prod
