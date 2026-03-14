@@ -1,18 +1,10 @@
-import { defineConfig } from 'vite';
-import tailwindcss from '@tailwindcss/postcss';
+import tailwindcss from "@tailwindcss/vite"
+import { sveltekit } from "@sveltejs/kit/vite"
+import { defineConfig } from "vite"
 
 export default defineConfig({
-  build: {
-    manifest: true,
-    outDir: 'public/build',
-    emptyOutDir: true,
-    rollupOptions: {
-      input: './assets/main.js',
-    },
+  plugins: [tailwindcss(), sveltekit()],
+  server: {
+    host: "0.0.0.0",
   },
-  css: {
-    postcss: {
-      plugins: [tailwindcss()],
-    },
-  },
-});
+})
