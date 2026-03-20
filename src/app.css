@@ -3,8 +3,7 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-    themes: light ---default;
-    /* themes: [ "light"]; */
+    themes: dark ---default, light;
 }
 
 body {
@@ -15,38 +14,47 @@ body {
 }
 
 @plugin "daisyui/theme" {
-    name: "light";
-    color-scheme: light;
-    default: true;
-
-    --color-primary: #e4e4e4;
-    --color-primary-content: #f1f5f9;
-    --color-neutral: #023a5d;
-    --color-info: #010e00;
-    --color-info-content: #0a1228;
-
-    --color-secondary: #86b916;
-    --color-secondary-content: #0284c7;
-    --color-success: #fe0606;
-    --color-accent: #ffffff;
-    --color-accent-content: #0284c7;
-}
-
-/* Modo oscuro */
-@plugin "daisyui/theme" {
     name: "dark";
     color-scheme: dark;
+    default: true;
 
-    --color-primary: #000d2f;
-    --color-primary-content: #e0f2fe;
-    --color-neutral: #ffffff;
-    --color-info: #0a1228;
-    --color-info-content: #0a1228;
-    --color-secondary: #86b916;
-    --color-secondary-content: #93c5fd;
-    --color-success: #ffffff;
-    --color-accent: #ffffff;
-    --color-accent-content: #93c5fd;
+    --color-primary: #60a5fa;
+    --color-primary-content: #ffffff;
+    --color-neutral: #1e293b;
+    --color-neutral-content: #f1f5f9;
+    --color-base-100: #2d3748;
+    --color-base-200: #1a202c;
+    --color-base-300: #4a5568;
+    --color-base-content: #f7fafc;
+    --color-info: #0ea5e9;
+    --color-info-content: #ffffff;
+    --color-secondary: #8b5cf6;
+    --color-secondary-content: #ffffff;
+    --color-success: #10b981;
+    --color-accent: #f59e0b;
+    --color-accent-content: #ffffff;
+}
+
+/* Modo claro */
+@plugin "daisyui/theme" {
+    name: "light";
+    color-scheme: light;
+
+    --color-primary: #3b82f6;
+    --color-primary-content: #ffffff;
+    --color-neutral: #1e293b;
+    --color-neutral-content: #f1f5f9;
+    --color-base-100: #ffffff;
+    --color-base-200: #f8fafc;
+    --color-base-300: #e2e8f0;
+    --color-base-content: #0f172a;
+    --color-info: #0ea5e9;
+    --color-info-content: #ffffff;
+    --color-secondary: #8b5cf6;
+    --color-secondary-content: #ffffff;
+    --color-success: #10b981;
+    --color-accent: #f59e0b;
+    --color-accent-content: #ffffff;
 }
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
