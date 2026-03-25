@@ -6,10 +6,10 @@
     let isDark = false
 
     const links = {
-        Experiencia: "/#experiencia",
-        Habilidades: "/#habilidades",
-        Proyectos: "/#proyectos",
-        Contacto: "/#contacto",
+        Experiencia: "/experiencia",
+        Habilidades: "/habilidades",
+        Proyectos: "/proyectos",
+        Contacto: "/contacto",
     }
 
     $: currentPath = $page.url.pathname
@@ -48,12 +48,12 @@
                     <a
                         href={path}
                         class="text-xs lg:text-sm font-medium tracking-wide transition-colors duration-200 hover:text-primary relative group
-                               {currentPath === path
+                               {currentPath === path || (currentPath === '/' && path === '/')
                             ? 'text-primary'
                             : 'text-neutral-content/70'}">
                         {label}
                         <span
-                            class="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full">
+                            class="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full {currentPath === path ? 'w-full' : ''}">
                         </span>
                     </a>
                 </li>

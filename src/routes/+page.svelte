@@ -74,8 +74,8 @@
             logros: [
                 "Reducción del 60% en tiempo de testing mediante automatización",
                 "Desarrollo de 3+ aplicaciones fullstack en producción",
-                "Implementación de CI/CD pipelines para deployment automatizado"
-            ]
+                "Implementación de CI/CD pipelines para deployment automatizado",
+            ],
         },
         {
             empresa: "Departamento de IT",
@@ -87,18 +87,18 @@
             logros: [
                 "Soporte técnico a 100+ usuarios",
                 "Mantenimiento de infraestructura de red",
-                "Resolución proactiva de incidentes técnicos"
-            ]
+                "Resolución proactiva de incidentes técnicos",
+            ],
         },
     ]
 </script>
 
 <svelte:head>
-    <title>Manuel Miguel - Ingeniero en Sistemas | Fullstack Developer & QA Automation</title>
+    <title>Miguemi</title>
     <meta
         name="description"
         content="Desarrollador fullstack con experiencia en Python, JavaScript, C#, Django, Angular, NestJS. QA Automation specialist. MSc. Seguridad Informática. Disponible para nuevas oportunidades." />
-    
+
     <!-- Schema.org JSON-LD para SEO estructurado -->
     {@html `
     <script type="application/ld+json">
@@ -149,7 +149,8 @@
 </svelte:head>
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center pt-24 pb-16 px-4 sm:px-6 lg:px-16">
+<section
+    class="min-h-screen flex items-center pt-24 pb-16 px-4 sm:px-6 lg:px-16">
     <div
         class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <!-- Texto -->
@@ -189,9 +190,9 @@
 
             <p
                 class="text-sm sm:text-base text-base-content/80 leading-relaxed max-w-sm font-light">
-                Desarrollo software robusto, escalable y bien testeado. 
-                Especializado en soluciones fullstack y automatización de QA. 
-                Experiencia comprobada reduciendo bugs en producción y 
+                Desarrollo software robusto, escalable y bien testeado.
+                Especializado en soluciones fullstack y automatización de QA.
+                Experiencia comprobada reduciendo bugs en producción y
                 optimizando procesos de desarrollo. Basado en Cobán, Guatemala.
             </p>
 
@@ -214,7 +215,8 @@
         <!-- Avatar -->
         <div class="flex justify-center lg:justify-end mt-8 lg:mt-0">
             <div class="relative">
-                <div class="w-48 h-60 sm:w-64 sm:h-80 border border-base-300 overflow-hidden">
+                <div
+                    class="w-48 h-60 sm:w-64 sm:h-80 border border-base-300 overflow-hidden">
                     <img
                         src="/images/mmm.jpg"
                         alt="Manuel Miguel"
@@ -230,23 +232,30 @@
 </section>
 
 <!-- LOGROS DESTACADOS -->
-<section class="px-4 sm:px-6 lg:px-16 py-12 sm:py-16 bg-base-200/30 border-y border-base-200">
+<section
+    class="px-4 sm:px-6 lg:px-16 py-12 sm:py-16 bg-base-200/30 border-y border-base-200">
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
             <div class="flex flex-col items-center text-center">
-                <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">5+</div>
+                <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">
+                    5+
+                </div>
                 <div class="text-xs sm:text-sm text-base-content/80 font-light">
                     Años de experiencia
                 </div>
             </div>
             <div class="flex flex-col items-center text-center">
-                <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">60%</div>
+                <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">
+                    60%
+                </div>
                 <div class="text-xs sm:text-sm text-base-content/80 font-light">
                     Reducción en tiempo de QA
                 </div>
             </div>
             <div class="flex flex-col items-center text-center">
-                <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">10+</div>
+                <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">
+                    10+
+                </div>
                 <div class="text-xs sm:text-sm text-base-content/80 font-light">
                     Proyectos completados
                 </div>
@@ -256,14 +265,18 @@
 </section>
 
 <!-- EXPERIENCIA -->
-<section class="px-4 sm:px-6 lg:px-16 py-16 sm:py-24 border-t border-base-200" id="experiencia">
+<section
+    class="px-4 sm:px-6 lg:px-16 py-16 sm:py-24 border-t border-base-200"
+    id="experiencia">
     <div class="max-w-6xl mx-auto">
         <div class="flex items-baseline gap-3 sm:gap-4 mb-10 sm:mb-14">
             <span
                 class="text-[10px] sm:text-xs text-base-content/50 tracking-widest font-mono">
                 01
             </span>
-            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Experiencia</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
+                Experiencia
+            </h2>
             <div class="flex-1 h-px bg-base-200"></div>
         </div>
 
@@ -284,7 +297,8 @@
                             class="text-[10px] sm:text-xs uppercase tracking-widest text-base-content/60 font-mono">
                             {exp.empresa}
                         </span>
-                        <h3 class="text-lg sm:text-xl font-semibold tracking-tight">
+                        <h3
+                            class="text-lg sm:text-xl font-semibold tracking-tight">
                             {exp.rol}
                         </h3>
                         <p
@@ -293,13 +307,17 @@
                         </p>
                         {#if exp.logros}
                             <div class="mt-3 flex flex-col gap-2">
-                                <span class="text-[10px] sm:text-xs uppercase tracking-widest text-base-content/70 font-mono">
+                                <span
+                                    class="text-[10px] sm:text-xs uppercase tracking-widest text-base-content/70 font-mono">
                                     Logros clave:
                                 </span>
                                 <ul class="space-y-1.5">
                                     {#each exp.logros as logro}
-                                        <li class="flex items-start gap-2 text-xs sm:text-sm text-base-content/80">
-                                            <i class="fa-solid fa-check text-primary text-xs mt-0.5 sm:mt-1 flex-shrink-0"></i>
+                                        <li
+                                            class="flex items-start gap-2 text-xs sm:text-sm text-base-content/80">
+                                            <i
+                                                class="fa-solid fa-check text-primary text-xs mt-0.5 sm:mt-1 flex-shrink-0">
+                                            </i>
                                             <span class="flex-1">{logro}</span>
                                         </li>
                                     {/each}
@@ -314,14 +332,18 @@
 </section>
 
 <!-- HABILIDADES -->
-<section class="px-4 sm:px-6 lg:px-16 py-16 sm:py-24 border-t border-base-200" id="habilidades">
+<section
+    class="px-4 sm:px-6 lg:px-16 py-16 sm:py-24 border-t border-base-200"
+    id="habilidades">
     <div class="max-w-6xl mx-auto">
         <div class="flex items-baseline gap-3 sm:gap-4 mb-10 sm:mb-14">
             <span
                 class="text-[10px] sm:text-xs text-base-content/50 tracking-widest font-mono">
                 02
             </span>
-            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Habilidades</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
+                Habilidades
+            </h2>
             <div class="flex-1 h-px bg-base-200"></div>
         </div>
 
@@ -354,7 +376,9 @@
             {#each [["Español", "Nativo"], ["Inglés", "Intermedio"], ["Q'eqchi'", "Nativo"]] as [lang, nivel]}
                 <div
                     class="px-4 sm:px-6 py-3 sm:py-4 hover:bg-base-200/40 transition-colors flex items-center justify-between">
-                    <span class="text-xs sm:text-sm text-base-content">{lang}</span>
+                    <span class="text-xs sm:text-sm text-base-content">
+                        {lang}
+                    </span>
                     <span
                         class="text-[10px] sm:text-xs font-mono text-base-content/60 uppercase tracking-wider">
                         {nivel}
@@ -366,14 +390,18 @@
 </section>
 
 <!-- PROYECTOS -->
-<section class="px-4 sm:px-6 lg:px-16 py-16 sm:py-24 border-t border-base-200" id="proyectos">
+<section
+    class="px-4 sm:px-6 lg:px-16 py-16 sm:py-24 border-t border-base-200"
+    id="proyectos">
     <div class="max-w-6xl mx-auto">
         <div class="flex items-baseline gap-3 sm:gap-4 mb-10 sm:mb-14">
             <span
                 class="text-[10px] sm:text-xs text-base-content/50 tracking-widest font-mono">
                 03
             </span>
-            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Proyectos</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
+                Proyectos
+            </h2>
             <div class="flex-1 h-px bg-base-200"></div>
         </div>
 
@@ -396,7 +424,8 @@
                         {proyecto.title}
                     </h3>
                     {#if proyecto.metrics}
-                        <div class="badge badge-sm badge-outline rounded-none text-[10px] sm:text-xs font-mono text-primary border-primary/30">
+                        <div
+                            class="badge badge-sm badge-outline rounded-none text-[10px] sm:text-xs font-mono text-primary border-primary/30">
                             {proyecto.metrics}
                         </div>
                     {/if}
@@ -429,14 +458,18 @@
 </section>
 
 <!-- CONTACTO -->
-<section class="px-4 sm:px-6 lg:px-16 py-16 sm:py-24 border-t border-base-200" id="contacto">
+<section
+    class="px-4 sm:px-6 lg:px-16 py-16 sm:py-24 border-t border-base-200"
+    id="contacto">
     <div class="max-w-6xl mx-auto">
         <div class="flex items-baseline gap-3 sm:gap-4 mb-10 sm:mb-14">
             <span
                 class="text-[10px] sm:text-xs text-base-content/50 tracking-widest font-mono">
                 04
             </span>
-            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Contacto</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
+                Contacto
+            </h2>
             <div class="flex-1 h-px bg-base-200"></div>
         </div>
 
@@ -451,9 +484,9 @@
             </h2>
             <p
                 class="text-xs sm:text-sm text-base-content/80 leading-relaxed font-light mb-8 sm:mb-10">
-                Estoy disponible para oportunidades de desarrollo fullstack, QA automation 
-                y consultoría en seguridad informática. Trabajo remoto o híbrido. 
-                Respondemos en menos de 24 horas.
+                Estoy disponible para oportunidades de desarrollo fullstack, QA
+                automation y consultoría en seguridad informática. Trabajo
+                remoto o híbrido. Respondemos en menos de 24 horas.
             </p>
 
             <div class="divide-y divide-base-200 border-y border-base-200">
@@ -512,7 +545,7 @@
                         class="fa-solid fa-arrow-up-right text-xs text-base-content/30 group-hover:text-base-content group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 ml-2">
                     </i>
                 </a>
-                
+
                 <a
                     href="tel:+50231247397"
                     class="flex items-center justify-between py-4 sm:py-5 hover:pl-2 sm:hover:pl-3 transition-all group no-underline">

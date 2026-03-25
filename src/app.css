@@ -1,264 +1,94 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
-/* @import "@fortawesome/fontawesome-free/css/all.min.css"; */
 @import "tailwindcss";
 
+/* daisyui config */
 @plugin "daisyui" {
-    themes: dark ---default, light;
+    themes: light --default;
 }
 
-body {
-    font-family: "Montserrat", sans-serif;
-}
-.montserrat {
-    font-family: "Montserrat", sans-serif;
+@plugin "daisyui/theme" {
+    name: "light";
+    color-scheme: light;
+    default: true;
+
+    --color-primary: #86b916;
+    --color-primary-content: #f1f5f9;
+
+    --color-secondary: #4e7c13;
+    --color-secondary-content: #f1f5f9;
+
+    --color-accent: #3358d3;
+    --color-accent-content: #f1f5f9;
+
+    --color-info: #f161cb;
+    --color-info-content: #242f39;
+
+    --color-warning: #ffc107;
+    --color-warning-content: #242f39;
+
+    --color-success: #33d37b;
+    --color-success-content: #242f39;
+
+    --color-error: #ef4444;
+    --color-error-content: #f1f5f9;
 }
 
 @plugin "daisyui/theme" {
     name: "dark";
     color-scheme: dark;
-    default: true;
 
-    --color-primary: #60a5fa;
-    --color-primary-content: #ffffff;
-    --color-neutral: #1e293b;
-    --color-neutral-content: #f1f5f9;
-    --color-base-100: #2d3748;
-    --color-base-200: #1a202c;
-    --color-base-300: #4a5568;
-    --color-base-content: #f7fafc;
-    --color-info: #0ea5e9;
-    --color-info-content: #ffffff;
-    --color-secondary: #8b5cf6;
-    --color-secondary-content: #ffffff;
-    --color-success: #10b981;
-    --color-accent: #f59e0b;
-    --color-accent-content: #ffffff;
-}
+    --color-primary: #86b916;
+    --color-primary-content: #242f39;
 
-/* Modo claro */
-@plugin "daisyui/theme" {
-    name: "light";
-    color-scheme: light;
+    --color-secondary: #4e7c13;
+    --color-secondary-content: #cbd1de;
 
-    --color-primary: #3b82f6;
-    --color-primary-content: #ffffff;
-    --color-neutral: #1e293b;
-    --color-neutral-content: #f1f5f9;
-    --color-base-100: #ffffff;
-    --color-base-200: #f8fafc;
-    --color-base-300: #e2e8f0;
-    --color-base-content: #0f172a;
-    --color-info: #0ea5e9;
-    --color-info-content: #ffffff;
-    --color-secondary: #8b5cf6;
-    --color-secondary-content: #ffffff;
-    --color-success: #10b981;
-    --color-accent: #f59e0b;
-    --color-accent-content: #ffffff;
+    --color-accent: #3358d3;
+    --color-accent-content: #cbd1de;
+
+    --color-neutral-dark: #2f4235f2;
+    --color-neutral-content-dark: #cbd1de;
+
+    --color-info: #f161cb;
+    --color-info-content: #242f39;
+
+    --color-success: #33d37b;
+    --color-success-content: #242f39;
+
+    --color-warning: #ffc107;
+    --color-warning-content: #242f39;
+
+    --color-error: #ef4444;
+    --color-error-content: #242f39;
 }
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-/* Estilos para botones */
-/* .btn-primary { */
-/*     background-color: var(--color-primary); */
-/*     color: var(--color-primary-content); */
-/* } */
-/**/
-/* .btn-secondary { */
-/*     background-color: var(--color-secondary); */
-/*     color: var(--color-secondary-content); */
-/* } */
-/**/
-/* .btn-accent { */
-/*     background-color: var(--color-accent); */
-/*     color: var(--color-accent-content); */
-/* } */
+@source "../views";
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
 
-@keyframes nube {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+@import "@fortawesome/fontawesome-free/css/fontawesome";
+@import "@fortawesome/fontawesome-free/css/regular";
+@import "@fortawesome/fontawesome-free/css/solid";
+@import "@fortawesome/fontawesome-free/css/brands";
+
+/* global css config */
+.ss-arrow path {
+    stroke: none;
+    fill: none;
+    d: none;
 }
 
-@keyframes slideJumpCenter {
-    0% {
-        transform: translateX(-100%) scale(0.8);
-        opacity: 0;
-    }
-    50% {
-        transform: translateX(10%) scale(1.1);
-        opacity: 1;
-    }
-    70% {
-        transform: translateX(-5%) scale(1);
-    }
-    100% {
-        transform: translateX(0) scale(1);
-    }
+html {
+    scrollbar-gutter: auto !important;
 }
 
-@keyframes foldImage {
-    0% {
-        transform: perspective(500px) rotateX(0deg);
-    }
-    50% {
-        transform: perspective(500px) rotateX(80deg);
-        opacity: 0.7;
-    }
-    100% {
-        transform: perspective(500px) rotateX(0deg);
-    }
-}
-/* efecto templor */
-@keyframes glitch {
-    0% {
-        transform: translate(0);
-    }
-    25% {
-        transform: translate(-2px, 2px);
-    }
-    50% {
-        transform: translate(2px, -2px);
-    }
-    75% {
-        transform: translate(-2px, 2px);
-    }
-    100% {
-        transform: translate(0);
-    }
+html:has(body.content-overflow-y) {
+    scrollbar-gutter: stable !important;
 }
 
-/* giro para los lados  */
-
-@keyframes flip {
-    0% {
-        transform: rotateY(0);
-    }
-    50% {
-        transform: rotateY(180deg);
-    }
-    100% {
-        transform: rotateY(360deg);
-    }
-}
-
-@keyframes crumple {
-    0% {
-        transform: scale(1);
-        filter: none;
-    }
-    50% {
-        transform: scale(0.1, 0.1) rotate(20deg);
-        filter: blur(5px) brightness(0.5);
-        border-radius: 50%;
-    }
-    100% {
-        transform: scale(1);
-        filter: none;
-        border-radius: 0;
-    }
-}
-
-/* animacion de escrir uno por uno el width era el 100% */
-@keyframes typing {
-    0% {
-        width: 0;
-    }
-    50% {
-        width: 50%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
-.typing {
-    display: inline-block;
-    font-size: 2rem;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 0px solid;
-    width: 0;
-    animation:
-        typing 3s steps(8, end) infinite alternate,
-        blink 0.7s infinite;
-    animation-delay: 0s, 3s; /* La pausa se maneja con "alternate" */
-    animation-fill-mode: both;
-}
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.crumple {
-    animation: crumple 3s ease-in-out infinite;
-}
-
-.flip {
-    animation: flip 4s ease-in-out infinite;
-}
-
-.glitch {
-    animation-delay: 3s;
-    animation: glitch 0.1s linear infinite;
-}
-
-.slide-jump {
-    animation: slideJumpCenter 1s ease-out forwards;
-    animation-delay: 1s; /* Retraso antes de iniciar la animación */
-    /* animation-iteration-count: infinite; */
-    animation-iteration-count: 1;
-    animation-duration: 2s;
-    /* animation-fill-mode: both; */
-    animation-fill-mode: forwards;
-}
-
-.nube {
-    animation: nube 3s ease-in-out infinite;
-}
-
-.fold {
-    display: inline-block;
-    animation: foldImage 3s ease-in-out infinite;
-    transform-origin: bottom;
-}
-
-/* animacion para el carrosel */
-.animate-slide {
-    animation: slide 7s linear infinite;
-}
-
-/* animacion para las imagenes de las motos  */
-.hover-zoom {
-    position: relative;
-    overflow: hidden;
-}
-
-.hover-zoom img {
-    transition: transform 0.4s ease;
-    will-change: transform;
-    transform-origin: center center;
-}
-
-.hover-zoom:hover img {
-    transform: scale(3); /* Aumenta este número si quieres más zoom */
-}
-
-.hover-zoom:hover {
-    cursor: zoom-in;
+.badge {
+    height: fit-content;
 }

@@ -1,12 +1,9 @@
-<footer class="w-full py-4 sm:py-6 px-4 sm:px-6 mt-16 sm:mt-20 bg-base-200 border-t border-base-300">
+<footer
+    class="w-full py-4 sm:py-6 px-4 sm:px-6 mt-16 sm:mt-20 bg-base-200 border-t border-base-300">
     <div
         class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
         <!-- Marca -->
-        <div class="flex items-center gap-1">
-            <span class="font-mono text-xs sm:text-sm text-base-content/40">&lt;</span>
-            <span class="font-bold text-base-content text-sm sm:text-base">miguemi</span>
-            <span class="font-mono text-xs sm:text-sm text-base-content/40">/&gt;</span>
-        </div>
+        <div class="flex items-center gap-1"></div>
 
         <!-- Redes -->
         <div class="flex items-center gap-4 sm:gap-5">
