@@ -38,52 +38,35 @@
 
     const proyectos = [
         {
-            title: "IDE Colaborativo en Tiempo Real",
+            title: "Portfolio Personal",
             description:
-                "Editor/IDE colaborativo construido con Node.js que permite edición simultánea en tiempo real y sincronización de sesiones entre usuarios.",
-            tags: ["Node.js", "WebSocket", "Collaborative"],
-            githubUrl: "https://github.com/miguemi",
-            metrics: "Soporte para sesiones en tiempo real",
+                "Sitio web personal construido con SvelteKit, TailwindCSS y DaisyUI. Arquitectura moderna con SSG, optimizado para SEO y diseño responsive. Deploy automatizado en GitHub Pages.",
+            tags: ["SvelteKit", "TailwindCSS", "DaisyUI", "SEO"],
+            githubUrl: "https://github.com/miguemi/miguemi.github.io",
+            liveUrl: "https://miguemi.github.io",
+            metrics: "100% Lighthouse Score",
         },
         {
-            title: "Sistema Web Pharmacy (Multi-tenant)",
+            title: "Sistema QA Automation",
             description:
-                "Plataforma de gestión para farmacias desarrollada en PHP con arquitectura multi-tenant para aislar datos por cliente y panel administrativo.",
-            tags: ["PHP", "Multi-tenant", "MySQL"],
-            githubUrl: "https://github.com/miguemi",
-            metrics: "Soporta múltiples clientes/tenants",
+                "Framework de pruebas automatizadas end-to-end para aplicaciones web en Finanssoreal S.A. Reducción del 60% en tiempo de testing y mejora continua de calidad del software.",
+            tags: ["Selenium", "Python", "CI/CD", "Testing"],
+            metrics: "60% reducción en tiempo de QA",
         },
         {
-            title: "fill_pdf_format",
+            title: "API REST Fullstack - Gestión Empresarial",
             description:
-                "Herramienta para sobreescribir y rellenar datos en plantillas PDF (fill_pdf_format) — extracción y reemplazo de campos en PDFs.",
-            tags: ["PDF", "PHP/Python", "Automatización"],
-            githubUrl: "https://github.com/miguemi",
-            metrics: "Automatiza generación de PDFs rellenados",
+                "Sistema fullstack con backend NestJS (TypeScript) y frontend Angular. Arquitectura escalable con autenticación JWT, validación de datos y CRUD completo. PostgreSQL con ORM TypeORM.",
+            tags: ["NestJS", "Angular", "PostgreSQL", "TypeScript"],
+            metrics: "API RESTful con 20+ endpoints",
         },
         {
-            title: "Sistema de Manejo de Asignaciones (Swagger)",
+            title: "Sistema de Gestión Django",
             description:
-                "API documentada con Swagger para el manejo de asignaciones y workflow documental, con endpoints para CRUD y auditoría.",
-            tags: ["REST API", "Swagger", "Documentación"],
+                "Aplicación web empresarial con Django y Python. Incluye autenticación de usuarios, panel de administración personalizado, API REST con DRF y reportes automatizados.",
+            tags: ["Django", "Python", "SQL Server", "REST API"],
             githubUrl: "https://github.com/miguemi",
-            metrics: "API documentada y consumible por terceros",
-        },
-        {
-            title: "Práctica con NestJS y Angular",
-            description:
-                "Proyecto práctico que integra backend en NestJS y frontend en Angular como laboratorio de buenas prácticas y arquitectura modular.",
-            tags: ["NestJS", "Angular", "TypeScript"],
-            githubUrl: "https://github.com/miguemi",
-            metrics: "Ejemplo de integración fullstack",
-        },
-        {
-            title: "Aporte al Proyecto Final de Seminario: Sistema para Bomberos",
-            description:
-                "Contribución al sistema de reportes para bomberos: módulos de gestión de incidentes y generación de reportes estadísticos.",
-            tags: ["Reportes", "Node.js/PHP", "Colaboración"],
-            githubUrl: "https://github.com/miguemi",
-            metrics: "Módulos de reportes y estadísticas",
+            metrics: "Sistema multi-usuario con roles",
         },
     ]
 
