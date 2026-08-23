@@ -3,6 +3,7 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
+	"packageManager": "pnpm@10.10.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -27,5 +28,4 @@
 		"daisyui": "^5.7.20",
 		"tailwindcss": "^4.3.3"
 	}
-
 }

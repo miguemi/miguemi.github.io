@@ -8,14 +8,11 @@ COPY . .
 
 RUN corepack enable && pnpm i && pnpm build
 
-FROM node:${NODE_VERSION}
+FROM nginx:alpine
 
-WORKDIR /app
-COPY --from=builder /build/pnpm-lock.yaml /app/
-COPY --from=builder /build/package.json /app/
-COPY --from=builder /build/node_modules /app/node_modules
-COPY --from=builder /build/build /app/build
+COPY --from=builder /build/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 3000
+EXPOSE 80
 
-CMD ["node", "/app/build/index.js"]
+CMD ["nginx", "-g", "daemon off;"]
