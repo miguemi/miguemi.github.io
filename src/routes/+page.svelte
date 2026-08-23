@@ -2,30 +2,37 @@
     import Card from "$lib/components/Card.svelte"
 
     const skills = {
-        Lenguajes: [
-            { name: "Python", icon: "fa-brands fa-python" },
-            { name: "JavaScript", icon: "fa-brands fa-js" },
-            { name: "TypeScript", icon: "fa-brands fa-js" },
-            { name: "C#", icon: "fa-solid fa-code" },
+        Backend: [
             { name: "PHP", icon: "fa-brands fa-php" },
-        ],
-        Frameworks: [
-            { name: "Django", icon: "fa-solid fa-layer-group" },
-            { name: "Angular", icon: "fa-brands fa-angular" },
-            { name: "NestJS", icon: "fa-solid fa-server" },
-            { name: "SvelteKit", icon: "fa-solid fa-fire" },
             { name: "Laravel", icon: "fa-brands fa-laravel" },
             { name: "Symfony", icon: "fa-solid fa-cubes" },
+            { name: "Node.js", icon: "fa-brands fa-node-js" },
+            { name: "Python", icon: "fa-brands fa-python" },
+            { name: "C#", icon: "fa-solid fa-code" },
+        ],
+        Frontend: [
+            { name: "JavaScript", icon: "fa-brands fa-js" },
+            { name: "Angular", icon: "fa-brands fa-angular" },
+            { name: "Tailwind CSS", icon: "fa-solid fa-wind" },
+            { name: "DaisyUI", icon: "fa-solid fa-fire" },
         ],
         "Bases de datos": [
             { name: "SQL Server", icon: "fa-solid fa-database" },
             { name: "PostgreSQL", icon: "fa-solid fa-database" },
         ],
-        "DevOps & Tools": [
-            { name: "Git / GitHub", icon: "fa-brands fa-github" },
+        "DevOps / Infraestructura": [
             { name: "Docker", icon: "fa-brands fa-docker" },
-            { name: "Linux / Nix", icon: "fa-brands fa-linux" },
-            { name: "QA Automation", icon: "fa-solid fa-vial" },
+            { name: "Kubernetes (básico)", icon: "fa-solid fa-dharmachakra" },
+            { name: "Linux / Unix", icon: "fa-brands fa-linux" },
+        ],
+        "Testing / QA": [
+            { name: "Selenium", icon: "fa-solid fa-vial" },
+            { name: "Appium", icon: "fa-solid fa-mobile-screen" },
+            { name: "Cypress", icon: "fa-solid fa-vial-circle-check" },
+        ],
+        "Gestión de proyectos": [
+            { name: "JIRA", icon: "fa-brands fa-jira" },
+            { name: "Scrum", icon: "fa-solid fa-people-group" },
         ],
     }
 
@@ -40,55 +47,109 @@
             metrics: "100% Lighthouse Score",
         },
         {
-            title: "Sistema QA Automation",
+            title: "Sistema de Farmacia Multi-Tenant",
             description:
-                "Framework de pruebas automatizadas end-to-end para aplicaciones web en Finanssoreal S.A. Reducción del 60% en tiempo de testing y mejora continua de calidad del software.",
-            tags: ["Selenium", "Python", "CI/CD", "Testing"],
-            metrics: "60% reducción en tiempo de QA",
+                "Sistema de gestión para farmacias con arquitectura multi-tenant desarrollado en PHP, permitiendo que múltiples farmacias operen de forma aislada sobre la misma plataforma.",
+            tags: ["PHP", "Multi-tenant"],
         },
         {
-            title: "API REST Fullstack - Gestión Empresarial",
+            title: "Servicio de Llenado de PDF",
             description:
-                "Sistema fullstack con backend NestJS (TypeScript) y frontend Angular. Arquitectura escalable con autenticación JWT, validación de datos y CRUD completo. PostgreSQL con ORM TypeORM.",
-            tags: ["NestJS", "Angular", "PostgreSQL", "TypeScript"],
-            metrics: "API RESTful con 20+ endpoints",
+                "Servicio en PHP para sobrescribir plantillas PDF con datos provenientes de una API o de base de datos, generando documentos rellenados de forma automática.",
+            tags: ["PHP", "PDF", "API"],
         },
         {
-            title: "Sistema de Gestión Django",
+            title: "Sistema de Asignaciones",
             description:
-                "Aplicación web empresarial con Django y Python. Incluye autenticación de usuarios, panel de administración personalizado, API REST con DRF y reportes automatizados.",
-            tags: ["Django", "Python", "SQL Server", "REST API"],
-            githubUrl: "https://github.com/miguemi",
-            metrics: "Sistema multi-usuario con roles",
+                "Sistema de asignaciones con documentación de API generada con Swagger para facilitar su integración y consumo por otros equipos.",
+            tags: ["PHP", "Swagger", "API REST"],
+        },
+        {
+            title: "Control de Financiamiento de Vehículos",
+            description:
+                "Sistema desarrollado como prueba técnica para el control de financiamiento de vehículos.",
+            tags: ["Prueba Técnica"],
+        },
+        {
+            title: "IDE Colaborativo en Tiempo Real",
+            description:
+                "IDE colaborativo en tiempo real construido con JavaScript y Node.js, permitiendo edición simultánea de código entre varios usuarios.",
+            tags: ["JavaScript", "Node.js", "Tiempo Real"],
+        },
+        {
+            title: "Registro de Productos",
+            description:
+                "Mini proyecto para el registro de productos con backend en NestJS y frontend en Angular.",
+            tags: ["NestJS", "Angular", "TypeScript"],
+        },
+        {
+            title: "Reportes para Bomberos Voluntarios",
+            description:
+                "Sistema de generación de reportes para Bomberos Voluntarios, desarrollado en PHP.",
+            tags: ["PHP"],
+        },
+        {
+            title: "Sistema de Ventas",
+            description: "Sistema de ventas desarrollado con Django y Python.",
+            tags: ["Django", "Python"],
+        },
+    ]
+
+    const certificaciones = [
+        {
+            name: "Scrum Fundamentals Certified (SFC)",
+            entidad: "SCRUMstudy",
+            icon: "fa-solid fa-people-group",
+        },
+        {
+            name: "CCNA v7",
+            entidad: "Cisco Networking Academy",
+            icon: "fa-solid fa-network-wired",
+        },
+        {
+            name: "CCNA1: Introducción a Redes, Fase 1",
+            entidad: "INTECAP",
+            icon: "fa-solid fa-diagram-project",
         },
     ]
 
     const experiencia = [
         {
-            empresa: "Finanssoreal S.A",
-            rol: "QA Manual & Automation + Programador Fullstack",
+            empresa: "Corposistemas S.A. (Freelance)",
+            rol: "Desarrollador Fullstack — App de Restaurante",
+            periodo: "Jun 2026 — Jul 2026",
+            descripcion:
+                "Desarrollo del flujo completo de la aplicación: gestión de pedidos, gestión de productos y experiencia de usuario.",
+            lugar: "Remoto",
+        },
+        {
+            empresa: "Proyecto Outsourcing (Freelance)",
+            rol: "Desarrollador Fullstack — Sistema Contable",
+            periodo: "Ene 2026 — May 2026",
+            descripcion:
+                "Construcción de un sistema contable en equipo reducido, cubriendo el ciclo completo desde el análisis hasta las pruebas.",
+            lugar: "Remoto",
+        },
+        {
+            empresa: "Finanssoreal S.A.",
+            rol: "Desarrollador Fullstack",
             periodo: "2024 — 2025",
             descripcion:
-                "Desarrollo fullstack con NestJS, Angular y Django. Implementación de framework de pruebas automáticas que redujo tiempos de QA en 60%. Mantenimiento y optimización de aplicaciones financieras críticas. Testing end-to-end con Selenium y PyTest.",
+                "Desarrollo y mantenimiento de una aplicación de créditos financieros para web y móvil.",
             lugar: "Cobán, Alta Verapaz",
             logros: [
-                "Reducción del 60% en tiempo de testing mediante automatización",
-                "Desarrollo de 3+ aplicaciones fullstack en producción",
-                "Implementación de CI/CD pipelines para deployment automatizado",
+                "Detección y corrección de una falla crítica de escalabilidad en la API compartida que saturaba el servidor",
+                "Identificación de inconsistencias en estados de cuenta y validación de la integridad de datos financieros",
+                "Implementación de revisión de código y pruebas de API por módulo antes de cada despliegue",
             ],
         },
         {
-            empresa: "Departamento de IT",
-            rol: "Técnico en Sistemas",
+            empresa: "Tribunal Eclesiástico",
+            rol: "Técnico de IT",
             periodo: "2019 — 2021",
             descripcion:
-                "Administración de infraestructura tecnológica, soporte técnico a usuarios y mantenimiento de sistemas. Gestión de redes, servidores y equipos informáticos en el Tribunal Eclesiástico y Residencia Estudiantil.",
+                "Soporte técnico en la Residencia Estudiantil Colonia Yalguo, Cobán.",
             lugar: "Cobán, Alta Verapaz",
-            logros: [
-                "Soporte técnico a 100+ usuarios",
-                "Mantenimiento de infraestructura de red",
-                "Resolución proactiva de incidentes técnicos",
-            ],
         },
     ]
 </script>
@@ -97,7 +158,7 @@
     <title>Miguemi</title>
     <meta
         name="description"
-        content="Desarrollador fullstack con experiencia en Python, JavaScript, C#, Django, Angular, NestJS. QA Automation specialist. MSc. Seguridad Informática. Disponible para nuevas oportunidades." />
+        content="Ingeniero en Sistemas y desarrollador fullstack con experiencia en PHP, Laravel, Symfony, Angular. Postgrado en Seguridad Informática. Disponible para nuevas oportunidades." />
 
     <!-- Schema.org JSON-LD para SEO estructurado -->
     {@html `
@@ -106,10 +167,10 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Manuel Miguel Miguel",
-        "jobTitle": "Ingeniero en Sistemas - Fullstack Developer & QA Automation",
+        "jobTitle": "Ingeniero en Sistemas - Fullstack Developer",
         "url": "https://miguemi.github.io",
         "image": "https://miguemi.github.io/images/mmm.jpg",
-        "email": "mailto:manuelmiguel80@hotmail.com",
+        "email": "mailto:miguemi41m@gmail.com",
         "telephone": "+50231247397",
         "address": {
             "@type": "PostalAddress",
@@ -125,19 +186,30 @@
             {
                 "@type": "EducationalOccupationalCredential",
                 "credentialCategory": "degree",
-                "name": "Master en Seguridad Informática"
+                "name": "Maestría en Seguridad Informática"
             },
             {
                 "@type": "EducationalOccupationalCredential",
                 "credentialCategory": "degree",
-                "name": "Ingeniería en Sistemas"
+                "name": "Ingeniería en Sistemas de Información y Ciencias de la Computación"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "certification",
+                "name": "Scrum Fundamentals Certified (SFC)"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "certification",
+                "name": "CCNA v7 - Cisco Networking Academy"
             }
         ],
         "knowsAbout": [
-            "Python", "JavaScript", "TypeScript", "C#", "PHP",
-            "Django", "Angular", "NestJS", "SvelteKit", "Laravel",
-            "PostgreSQL", "SQL Server", "QA Automation", "Testing",
-            "Git", "Docker", "Linux", "Seguridad Informática"
+            "PHP", "Laravel", "Symfony", "Node.js", "Python", "C#",
+            "JavaScript", "Angular", "Tailwind CSS", "SvelteKit",
+            "SQL Server", "PostgreSQL", "Docker", "Kubernetes",
+            "Linux", "Selenium", "Appium", "Cypress", "Scrum",
+            "Seguridad Informática"
         ],
         "sameAs": [
             "https://github.com/miguemi",
@@ -149,13 +221,14 @@
 </svelte:head>
 
 <!-- HERO -->
-<section
-    class="min-h-screen flex items-center pt-24 pb-16 px-4 sm:px-6 lg:px-16">
+<section class="relative pt-16 pb-10 sm:pt-20 sm:pb-14 px-4 sm:px-6 lg:px-16">
     <div
-        class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        class="max-w-4xl mx-auto w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-14">
         <!-- Texto -->
-        <div class="flex flex-col gap-4 sm:gap-6">
-            <div class="flex items-center gap-3">
+        <div
+            class="flex flex-col gap-3 sm:gap-4 text-center lg:text-left lg:max-w-lg">
+            <div
+                class="flex items-center justify-center lg:justify-start gap-3">
                 <div class="w-6 sm:w-8 h-px bg-base-content/50"></div>
                 <span
                     class="text-[10px] sm:text-xs uppercase tracking-widest text-base-content/70">
@@ -164,39 +237,31 @@
             </div>
 
             <h1
-                class="text-5xl sm:text-6xl lg:text-8xl font-bold leading-none tracking-tight">
+                class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-none tracking-tight">
                 Manuel
-                <br />
                 <span class="text-base-content/40 italic font-normal">
                     Miguel.
                 </span>
             </h1>
 
-            <div
-                class="border-l-2 border-base-content/30 pl-3 sm:pl-4 flex flex-col gap-1">
-                <span
-                    class="text-[10px] sm:text-xs uppercase tracking-widest text-base-content/70">
-                    Desarrollo Fullstack
-                </span>
-                <span
-                    class="text-[10px] sm:text-xs uppercase tracking-widest text-base-content/70">
-                    QA &amp; Automation
-                </span>
-                <span
-                    class="text-[10px] sm:text-xs uppercase tracking-widest text-base-content/70">
-                    MSc. Seguridad Informática
-                </span>
+            <div class="flex flex-wrap justify-center lg:justify-start gap-2">
+                {#each ["Desarrollo Fullstack", "PHP · Laravel · Symfony", "MSc. Seguridad Informática"] as tag}
+                    <span
+                        class="text-[10px] sm:text-xs uppercase tracking-widest text-base-content/70 border border-base-300 px-2.5 py-1 hover:border-primary hover:text-primary transition-colors cursor-default">
+                        {tag}
+                    </span>
+                {/each}
             </div>
 
             <p
-                class="text-sm sm:text-base text-base-content/80 leading-relaxed max-w-sm font-light">
-                Desarrollo software robusto, escalable y bien testeado.
-                Especializado en soluciones fullstack y automatización de QA.
-                Experiencia comprobada reduciendo bugs en producción y
-                optimizando procesos de desarrollo. Basado en Cobán, Guatemala.
+                class="text-xs sm:text-sm text-base-content/80 leading-relaxed max-w-md mx-auto lg:mx-0 font-light">
+                Ingeniero en Sistemas con 3 años de experiencia como
+                desarrollador fullstack, enfocado en PHP, Laravel y Symfony, con
+                experiencia complementaria en QA de aplicaciones web y móviles,
+                Docker y Kubernetes básico. Postgrado en Seguridad Informática.
             </p>
 
-            <div class="flex gap-3 flex-wrap">
+            <div class="flex gap-3 flex-wrap justify-center lg:justify-start">
                 <a
                     href="#contacto"
                     class="btn btn-neutral btn-sm rounded-none px-4 sm:px-6 text-xs sm:text-sm">
@@ -213,51 +278,18 @@
         </div>
 
         <!-- Avatar -->
-        <div class="flex justify-center lg:justify-end mt-8 lg:mt-0">
-            <div class="relative">
+        <div class="flex justify-center lg:justify-end">
+            <div class="relative group">
                 <div
-                    class="w-48 h-60 sm:w-64 sm:h-80 border border-base-300 overflow-hidden">
+                    class="w-32 h-40 sm:w-40 sm:h-52 border border-base-300 overflow-hidden transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-lg">
                     <img
                         src="/images/mmm.jpg"
                         alt="Manuel Miguel"
                         class="w-full h-full object-cover object-top" />
                 </div>
                 <div
-                    class="badge badge-neutral rounded-none absolute -bottom-3 -right-3 py-2 sm:py-3 px-3 sm:px-4 text-[10px] sm:text-xs font-normal whitespace-nowrap">
-                    🎓 MSc. Seguridad Informática
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- LOGROS DESTACADOS -->
-<section
-    class="px-4 sm:px-6 lg:px-16 py-12 sm:py-16 bg-base-200/30 border-y border-base-200">
-    <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
-            <div class="flex flex-col items-center text-center">
-                <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">
-                    5+
-                </div>
-                <div class="text-xs sm:text-sm text-base-content/80 font-light">
-                    Años de experiencia
-                </div>
-            </div>
-            <div class="flex flex-col items-center text-center">
-                <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">
-                    60%
-                </div>
-                <div class="text-xs sm:text-sm text-base-content/80 font-light">
-                    Reducción en tiempo de QA
-                </div>
-            </div>
-            <div class="flex flex-col items-center text-center">
-                <div class="text-3xl sm:text-4xl font-bold text-primary mb-2">
-                    10+
-                </div>
-                <div class="text-xs sm:text-sm text-base-content/80 font-light">
-                    Proyectos completados
+                    class="badge badge-neutral rounded-none absolute -bottom-2 -right-2 py-1.5 sm:py-2 px-2 sm:px-3 text-[9px] sm:text-[10px] font-normal whitespace-nowrap">
+                    🎓 MSc. Seguridad
                 </div>
             </div>
         </div>
@@ -348,7 +380,7 @@
         </div>
 
         <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-x-0 sm:divide-x divide-y sm:divide-y-0 lg:divide-y divide-base-200 border border-base-200">
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-x-0 sm:divide-x divide-y sm:divide-y-0 lg:divide-y divide-base-200 border border-base-200">
             {#each Object.entries(skills) as [categoria, items]}
                 <div class="p-4 sm:p-6 hover:bg-base-200/40 transition-colors">
                     <p
@@ -372,8 +404,8 @@
 
         <!-- Idiomas -->
         <div
-            class="grid grid-cols-1 sm:grid-cols-3 divide-x-0 sm:divide-x divide-y sm:divide-y-0 divide-base-200 border border-base-200 border-t-0">
-            {#each [["Español", "Nativo"], ["Inglés", "Intermedio"], ["Q'eqchi'", "Nativo"]] as [lang, nivel]}
+            class="grid grid-cols-1 sm:grid-cols-2 divide-x-0 sm:divide-x divide-y sm:divide-y-0 divide-base-200 border border-base-200 border-t-0">
+            {#each [["Español", "Nativo"], ["Inglés", "Intermedio"]] as [lang, nivel]}
                 <div
                     class="px-4 sm:px-6 py-3 sm:py-4 hover:bg-base-200/40 transition-colors flex items-center justify-between">
                     <span class="text-xs sm:text-sm text-base-content">
@@ -389,6 +421,45 @@
     </div>
 </section>
 
+<!-- CERTIFICACIONES -->
+<section
+    class="px-4 sm:px-6 lg:px-16 py-16 sm:py-24 border-t border-base-200"
+    id="certificaciones">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex items-baseline gap-3 sm:gap-4 mb-10 sm:mb-14">
+            <span
+                class="text-[10px] sm:text-xs text-base-content/50 tracking-widest font-mono">
+                03
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
+                Certificaciones
+            </h2>
+            <div class="flex-1 h-px bg-base-200"></div>
+        </div>
+
+        <div
+            class="grid grid-cols-1 sm:grid-cols-3 divide-x-0 sm:divide-x divide-y sm:divide-y-0 divide-base-200 border border-base-200">
+            {#each certificaciones as cert}
+                <div
+                    class="p-5 sm:p-6 flex flex-col gap-3 hover:bg-base-200/40 transition-colors">
+                    <div
+                        class="w-9 h-9 border border-base-300 flex items-center justify-center">
+                        <i class="{cert.icon} text-sm text-base-content/60"></i>
+                    </div>
+                    <h3
+                        class="text-sm sm:text-base font-semibold tracking-tight leading-snug">
+                        {cert.name}
+                    </h3>
+                    <span
+                        class="text-[10px] sm:text-xs font-mono uppercase tracking-widest text-base-content/60">
+                        {cert.entidad}
+                    </span>
+                </div>
+            {/each}
+        </div>
+    </div>
+</section>
+
 <!-- PROYECTOS -->
 <section
     class="px-4 sm:px-6 lg:px-16 py-16 sm:py-24 border-t border-base-200"
@@ -397,7 +468,7 @@
         <div class="flex items-baseline gap-3 sm:gap-4 mb-10 sm:mb-14">
             <span
                 class="text-[10px] sm:text-xs text-base-content/50 tracking-widest font-mono">
-                03
+                04
             </span>
             <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
                 Proyectos
@@ -409,16 +480,18 @@
             class="grid grid-cols-1 lg:grid-cols-2 divide-x-0 lg:divide-x divide-y lg:divide-y-0 divide-base-200 border border-base-200">
             {#each proyectos as proyecto, i}
                 <a
-                    href={proyecto.githubUrl}
-                    target="_blank"
+                    href={proyecto.githubUrl || undefined}
+                    target={proyecto.githubUrl ? "_blank" : undefined}
                     class="p-6 sm:p-8 flex flex-col gap-3 hover:bg-base-200/40 transition-colors group no-underline">
                     <div class="flex justify-between items-start">
                         <span class="text-xs font-mono text-base-content/40">
                             0{i + 1}
                         </span>
-                        <i
-                            class="fa-solid fa-arrow-up-right text-xs text-base-content/40 group-hover:text-base-content group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">
-                        </i>
+                        {#if proyecto.githubUrl}
+                            <i
+                                class="fa-solid fa-arrow-up-right text-xs text-base-content/40 group-hover:text-base-content group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">
+                            </i>
+                        {/if}
                     </div>
                     <h3 class="text-lg sm:text-xl font-semibold tracking-tight">
                         {proyecto.title}
@@ -465,7 +538,7 @@
         <div class="flex items-baseline gap-3 sm:gap-4 mb-10 sm:mb-14">
             <span
                 class="text-[10px] sm:text-xs text-base-content/50 tracking-widest font-mono">
-                04
+                05
             </span>
             <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
                 Contacto
@@ -484,14 +557,14 @@
             </h2>
             <p
                 class="text-xs sm:text-sm text-base-content/80 leading-relaxed font-light mb-8 sm:mb-10">
-                Estoy disponible para oportunidades de desarrollo fullstack, QA
-                automation y consultoría en seguridad informática. Trabajo
-                remoto o híbrido. Respondemos en menos de 24 horas.
+                Estoy disponible para oportunidades de desarrollo fullstack y
+                consultoría en seguridad informática. Trabajo remoto o
+                presencial. Respondemos en menos de 24 horas.
             </p>
 
             <div class="divide-y divide-base-200 border-y border-base-200">
                 <a
-                    href="mailto:manuelmiguel80@hotmail.com"
+                    href="mailto:miguemi41m@gmail.com"
                     class="flex items-center justify-between py-4 sm:py-5 hover:pl-2 sm:hover:pl-3 transition-all group no-underline">
                     <div class="flex items-center gap-3 sm:gap-4">
                         <div
@@ -507,7 +580,7 @@
                             </span>
                             <span
                                 class="block text-xs sm:text-sm text-base-content/80 group-hover:text-base-content transition-colors break-all">
-                                manuelmiguel80@hotmail.com
+                                miguemi41m@gmail.com
                             </span>
                         </div>
                     </div>

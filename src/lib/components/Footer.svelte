@@ -24,7 +24,7 @@
                 <i class="fa-brands fa-github"></i>
             </a>
             <a
-                href="mailto:manuelmiguel80@hotmail.com"
+                href="mailto:miguemi41m@gmail.com"
                 aria-label="Email"
                 class="text-base-content/30 hover:text-base-content transition-colors duration-200 text-lg sm:text-xl">
                 <i class="fa-solid fa-envelope"></i>
