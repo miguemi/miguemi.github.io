@@ -2,37 +2,30 @@
     import Card from "$lib/components/Card.svelte"
 
     const skills = {
-        "Backend": [
+        Lenguajes: [
+            { name: "Python", icon: "fa-brands fa-python" },
+            { name: "JavaScript", icon: "fa-brands fa-js" },
+            { name: "TypeScript", icon: "fa-brands fa-js" },
+            { name: "C#", icon: "fa-solid fa-code" },
             { name: "PHP", icon: "fa-brands fa-php" },
+        ],
+        Frameworks: [
+            { name: "Django", icon: "fa-solid fa-layer-group" },
+            { name: "Angular", icon: "fa-brands fa-angular" },
+            { name: "NestJS", icon: "fa-solid fa-server" },
+            { name: "SvelteKit", icon: "fa-solid fa-fire" },
             { name: "Laravel", icon: "fa-brands fa-laravel" },
             { name: "Symfony", icon: "fa-solid fa-cubes" },
-            { name: "Node.js", icon: "fa-brands fa-node-js" },
-            { name: "Python", icon: "fa-brands fa-python" },
-            { name: "C#", icon: "fa-solid fa-code" },
-        ],
-        "Frontend": [
-            { name: "JavaScript", icon: "fa-brands fa-js" },
-            { name: "Angular", icon: "fa-brands fa-angular" },
-            { name: "Tailwind CSS", icon: "fa-brands fa-css3-alt" },
-            { name: "DaisyUI", icon: "fa-solid fa-palette" },
         ],
         "Bases de datos": [
             { name: "SQL Server", icon: "fa-solid fa-database" },
             { name: "PostgreSQL", icon: "fa-solid fa-database" },
         ],
-        "DevOps / Infra": [
+        "DevOps & Tools": [
+            { name: "Git / GitHub", icon: "fa-brands fa-github" },
             { name: "Docker", icon: "fa-brands fa-docker" },
-            { name: "Kubernetes", icon: "fa-brands fa-kubernetes" },
-            { name: "Linux", icon: "fa-brands fa-linux" },
-        ],
-        "Testing / QA": [
-            { name: "Selenium", icon: "fa-brands fa-selenium" },
-            { name: "Appium", icon: "fa-solid fa-mobile" },
-            { name: "Cypress", icon: "fa-brands fa-codepen" },
-        ],
-        "Gestión": [
-            { name: "JIRA", icon: "fa-brands fa-jira" },
-            { name: "Scrum", icon: "fa-solid fa-person-running" },
+            { name: "Linux / Nix", icon: "fa-brands fa-linux" },
+            { name: "QA Automation", icon: "fa-solid fa-vial" },
         ],
     }
 
@@ -72,62 +65,39 @@
 
     const experiencia = [
         {
-            empresa: "Corpoinstancias S.A. (Freelance)",
-            rol: "Desarrollador Fullstack — App de Restaurante",
-            periodo: "Jun 2026 — Jul 2026",
-            descripcion:
-                "Desarrollo del flujo completo de la aplicación: gestión de pedidos, productos y experiencia de usuario. Integración de pasarelas de pago y panel administrativo.",
-            lugar: "Remoto",
-            logros: [
-                "Entrega del MVP en 4 semanas",
-                "Integración de pasarela de pagos y sistema de notificaciones",
-            ],
-        },
-        {
-            empresa: "Proyecto Outsourcing (Freelance)",
-            rol: "Desarrollador Fullstack — Sistema Contable",
-            periodo: "Ene 2026 — May 2026",
-            descripcion:
-                "Construcción de un sistema contable en equipo reducido, cubriendo el ciclo completo desde el análisis hasta las pruebas. API REST y panel web.",
-            lugar: "Remoto",
-            logros: [
-                "Cobertura de pruebas automatizadas y revisión de código",
-                "Entrega de módulos contables críticos para producción",
-            ],
-        },
-        {
-            empresa: "Finanssoreal S.A.",
-            rol: "Desarrollador Fullstack / QA",
+            empresa: "Finanssoreal S.A",
+            rol: "QA Manual & Automation + Programador Fullstack",
             periodo: "2024 — 2025",
             descripcion:
-                "Desarrollo y mantenimiento de una aplicación de créditos financieros para web y móvil. Detección y corrección de fallas críticas, validación de integridad de datos y pruebas de API por módulo antes de cada despliegue.",
-            lugar: "Cobán, Guatemala",
+                "Desarrollo fullstack con NestJS, Angular y Django. Implementación de framework de pruebas automáticas que redujo tiempos de QA en 60%. Mantenimiento y optimización de aplicaciones financieras críticas. Testing end-to-end con Selenium y PyTest.",
+            lugar: "Cobán, Alta Verapaz",
             logros: [
-                "Implementación de framework de pruebas E2E con Selenium y PyTest",
-                "Identificación y corrección de bugs críticos en API escalable",
-                "Revisión de código y mejoras de seguridad en endpoints financieros",
+                "Reducción del 60% en tiempo de testing mediante automatización",
+                "Desarrollo de 3+ aplicaciones fullstack en producción",
+                "Implementación de CI/CD pipelines para deployment automatizado",
             ],
         },
         {
-            empresa: "Tribunal Eclesiástico — Residencia Estudiantil",
-            rol: "Técnico de IT",
+            empresa: "Departamento de IT",
+            rol: "Técnico en Sistemas",
             periodo: "2019 — 2021",
             descripcion:
-                "Soporte técnico y administración de infraestructura en la Residencia Estudiantil Colonia Yalguo y el Tribunal Eclesiástico.",
-            lugar: "Cobán, Guatemala",
+                "Administración de infraestructura tecnológica, soporte técnico a usuarios y mantenimiento de sistemas. Gestión de redes, servidores y equipos informáticos en el Tribunal Eclesiástico y Residencia Estudiantil.",
+            lugar: "Cobán, Alta Verapaz",
             logros: [
-                "Soporte técnico a usuarios y mantenimiento de red",
-                "Implementación de políticas básicas de seguridad y backups",
+                "Soporte técnico a 100+ usuarios",
+                "Mantenimiento de infraestructura de red",
+                "Resolución proactiva de incidentes técnicos",
             ],
         },
     ]
 </script>
 
 <svelte:head>
-    <title>Manuel Miguel Miguel - Ingeniero en Sistemas | Desarrollador Fullstack</title>
+    <title>Miguemi</title>
     <meta
         name="description"
-        content="Ingeniero en Sistemas · Desarrollador Fullstack con experiencia en PHP, Laravel, Symfony, Python y JavaScript. Maestría en Seguridad Informática. Disponible para trabajo remoto o presencial." />
+        content="Desarrollador fullstack con experiencia en Python, JavaScript, C#, Django, Angular, NestJS. QA Automation specialist. MSc. Seguridad Informática. Disponible para nuevas oportunidades." />
 
     <!-- Schema.org JSON-LD para SEO estructurado -->
     {@html `
@@ -136,11 +106,11 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Manuel Miguel Miguel",
-        "jobTitle": "Ingeniero en Sistemas · Desarrollador Fullstack · QA Manual & Automation",
+        "jobTitle": "Ingeniero en Sistemas - Fullstack Developer & QA Automation",
         "url": "https://miguemi.github.io",
         "image": "https://miguemi.github.io/images/mmm.jpg",
-        "email": "mailto:miguemi41m@gmail.com",
-        "telephone": "+502 3124 7397",
+        "email": "mailto:manuelmiguel80@hotmail.com",
+        "telephone": "+50231247397",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Cobán",
@@ -195,10 +165,10 @@
 
             <h1
                 class="text-5xl sm:text-6xl lg:text-8xl font-bold leading-none tracking-tight">
-                MANUEL MIGUEL
+                Manuel
                 <br />
                 <span class="text-base-content/40 italic font-normal">
-                    MIGUEL
+                    Miguel.
                 </span>
             </h1>
 
@@ -206,24 +176,24 @@
                 class="border-l-2 border-base-content/30 pl-3 sm:pl-4 flex flex-col gap-1">
                 <span
                     class="text-[10px] sm:text-xs uppercase tracking-widest text-base-content/70">
-                    Desarrollador Fullstack
+                    Desarrollo Fullstack
+                </span>
+                <span
+                    class="text-[10px] sm:text-xs uppercase tracking-widest text-base-content/70">
+                    QA &amp; Automation
                 </span>
                 <span
                     class="text-[10px] sm:text-xs uppercase tracking-widest text-base-content/70">
                     MSc. Seguridad Informática
                 </span>
-                <span
-                    class="text-[10px] sm:text-xs uppercase tracking-widest text-base-content/70">
-                    QA Manual &amp; Automation
-                </span>
             </div>
 
             <p
                 class="text-sm sm:text-base text-base-content/80 leading-relaxed max-w-sm font-light">
-                Del frontend al backend, y de ahí a la prueba.
-                Ingeniero en Sistemas, fullstack middle, con maestría
-                en Seguridad Informática. QA manual y automation:
-                encuentro lo que se rompe antes de que lo haga el usuario.
+                Desarrollo software robusto, escalable y bien testeado.
+                Especializado en soluciones fullstack y automatización de QA.
+                Experiencia comprobada reduciendo bugs en producción y
+                optimizando procesos de desarrollo. Basado en Cobán, Guatemala.
             </p>
 
             <div class="flex gap-3 flex-wrap">
@@ -521,7 +491,7 @@
 
             <div class="divide-y divide-base-200 border-y border-base-200">
                 <a
-                    href="mailto:miguemi41m@gmail.com"
+                    href="mailto:manuelmiguel80@hotmail.com"
                     class="flex items-center justify-between py-4 sm:py-5 hover:pl-2 sm:hover:pl-3 transition-all group no-underline">
                     <div class="flex items-center gap-3 sm:gap-4">
                         <div
@@ -537,7 +507,7 @@
                             </span>
                             <span
                                 class="block text-xs sm:text-sm text-base-content/80 group-hover:text-base-content transition-colors break-all">
-                                miguemi41m@gmail.com
+                                manuelmiguel80@hotmail.com
                             </span>
                         </div>
                     </div>
